@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+  .marks{
+    position: absolute;
+    left: 30px;
+    
+  }
+</style>
+
+<body>
+  
+  
+  <p>marks you got:</p>
+<input type="number" name="marks" id="marks">
+
+<p>out of:</p>
+<input type="number" name="outof" id="outof">
+
+<input type="button" value="calculate" id="calculate">
+
+<p id ="result"></p>
+
+<script>
+  document.getElementById('calculate').onclick = function() {
+    var marks = document.getElementById('marks').value
+    var outof = document.getElementById('outof').value
+    percentage = marks * 100 / outof
+    document.getElementById('result').innerHTML ='Your result is '+ percentage +'%'
+  };
+</script>
+
+
+
+</body>
+
+</html>
